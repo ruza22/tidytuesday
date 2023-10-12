@@ -23,12 +23,12 @@ plot_usmap(data = chc_plot, values = "mean_share", color = "grey") +
                         name = "Share",
                         label = scales::label_percent()) +
   theme(legend.position = "right",
-        plot.title = element_text(size=12),
+        plot.title = element_text(size=10),
         plot.subtitle = element_text(size=8),
         plot.caption = element_text(size=6)) +
   geom_polygon(data = usmapdata::us_map(regions = "states"),
                aes(x, y, group = group), fill = NA, size = 0.3, color = "black") +
-  labs(title = "Prices charged for Center-based Care for preschoolers as a share of median house income.",
+  labs(title = "Prices charged for Center-based Care for preschoolers as a share of median household income.",
        subtitle = "Childcare is an average of yearly full-time medians. Income expressed in 2018 dollars. Data collected between 2008-2018",
        caption = "Source: National Database of Childcare Prices (https://www.dol.gov/agencies/wb/topics/featured-childcare), Graphic: Lukas Ruzicka")
 
