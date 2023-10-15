@@ -49,8 +49,9 @@ imdb_hist <- ggplot(data = estims_imdb, mapping = aes(x = estimate)) +
            label = "Coaching estimate mean") +
   annotate("text", x = imdb_mean$mean_estim[2] - 0.03, y = 50, angle = 90,
            label = "Dating estimate mean") +
-  labs(title = "Bootstrapping estimates of LM, 1000 sampling iterations for each group",
-       subtitle = sprintf("Imdb rating is the dependent variable, Cohen's d = %.2f", cd_imdb$estimate)) +
+  labs(title = "Bootstrapping estimates of linear coefficients",
+       subtitle = sprintf("Formula: Imbd_rating ~ Coach + Date, 1000 iterations, Cohen's d = %.2f", cd_imdb$estimate),
+       caption = "Source: https://github.com/deepshamenghani/richmondway, Graphics: Lukas Ruzicka") +
   xlab("Coefficient estimate") +
   ylab("Count")
 
@@ -66,8 +67,9 @@ fck_hist <- ggplot(data = estims_fck, mapping = aes(x = estimate)) +
            label = "Coaching estimate mean") +
   annotate("text", x = fck_mean$mean_estim[2] - 0.2, y = 50, angle = 90,
            label = "Dating estimate mean") +
-  labs(title = "Bootstrapping estimates of LM, 1000 sampling iterations for each group",
-       subtitle = sprintf("F word count is the dependent variable, Cohen's d = %.2f", cd_fck$estimate)) +
+  labs(title = "Bootstrapping estimates of linear coefficients",
+       subtitle = sprintf("Formula: Fck_count ~ Coach + Date, 1000 iterations, Cohen's d = %.2f", cd_fck$estimate),
+       caption = "Source: https://github.com/deepshamenghani/richmondway, Graphics: Lukas Ruzicka") +
   xlab("Coefficient estimate") +
   ylab("Count")
   
